@@ -6,7 +6,7 @@
 
 ## Project screenshot
 
- <img src="src/assets/images/screenshot.png" width=500px >
+ <img src="./src/assets/screenshot.png" width=500px >
  This is the landing page of the Website.
 
 ## Technologies Used
@@ -29,7 +29,7 @@
 
 Run `ng serve` for a dev server. Navigate to## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to ` http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 
 
