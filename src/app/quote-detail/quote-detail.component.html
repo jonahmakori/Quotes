@@ -1,13 +1,19 @@
-<!-- <p>{{goal.description}}</p>
-<button (click)= 'goalComplete(true)'>Complete</button>
-<p>This goal will be complete in {{goal.completeDate|dateCount}} days</p> -->
+<div class="card" style="color: rgb(16, 95, 5);">
 
+    <p>
+      Author:{{quote.author}}
+    </p>
+    <p>
+      Publisher:{{quote.name}}
+    </p>
+    <p>
+      Upvotes:{{quote.upvotes}}
+    </p>
+    <p>
+      Downvotes:{{quote.downvotes}}
+    </p>
+    <p>
+       Date {{quote.completeDate|date}}
+      </p>
 
-<!-- 
-<p>{{goal.description}}</p>
-<p>This goal will be complete in {{goal.completeDate|dateCount}} days</p>
-<button (click)= 'goalDelete(true)'>Delete Goal</button> -->
-
-<p>{{quote.description}}</p>
-<p>This quote will be complete in {{quote.completeDate|dateCount}} days</p>
-<button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete quote</button>
+  </div>

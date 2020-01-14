@@ -10,6 +10,6 @@ export class AppComponent {
    
   ];
 
-  title = 'Quates-App';
+  title = 'Quates-Web-App';
 }
 

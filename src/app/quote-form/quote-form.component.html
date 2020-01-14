@@ -1,31 +1,39 @@
-<div class="container-fluid">
-  <h2 class="text-center">Create a new Quote</h2>
-  <hr>
-  <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
-      <div class="form-group">
+<div class="container">
+<form (ngSubmit)="submitQuote()" class="card-body ">
+  <div class="text-center">
 
-          <label for="name">Name</label>
-          <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name='ngModel' required>
-          <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-            <p>Name is required</p>
-          </div>
-      </div>
-      <div class="form-group">
+    <h3 class="white-text"> Add Quote <mdb-icon far icon="arrow-alt-circleDownvotes:0-down"></mdb-icon>
+    </h3>
+    <hr class="hr-light">
+  </div>
 
-          <label for="description">Quote</label>
-          <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuote.description" name="description" #description="ngModel" required></textarea>
-          <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
-            <p>Quote is required</p>
-          </div>
-      </div>
-      <div class="form-group">
+  <div class="md-form">
+    <i class="fas fa-user prefix white-text"></i>
+    <label for="form3">Person's name</label>
+    <input type="text" id="form3" class="form-control " name="publisher" [(ngModel)]="quoteEditor" mdbInput>
+  </div>
+  <div class="md-form">
+    <i class="fas fa-quote-left prefix white-text"></i>
+    <label for="form2">Quotes</label>
+    <input type="text" id="form2" class="form-control" name="quote" [(ngModel)]="quoteWords" mdbInput>
+  </div>
 
-          <label for="complete">Completion</label>
-          <input type='date' id="complete" [(ngModel)]="newQuote.completeDate" name="completeDate" #completeDate="ngModel" required>
-          <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
-            <p>Date is required</p>
-          </div>
-      </div>
-      <button type="submit" class="btn btn-success">Add Quote</button>
-  </form>
+  <div class="md-form">
+    <i class="fas fa-user prefix white-text"></i>
+    <label for="form4">Author</label>
+    <input type="text" id="form4" class="form-control" name="author" [(ngModel)]="quoteAuthor" mdbInput>
+    
+  </div>
+  <div class="md-form">
+    <i class="far fa-clock prefix white-text"></i>
+    <label class="" for="form5">Completion Date</label>
+    <input type='date' id="form5" class="form-control" name="completeDate" [(ngModel)]="quoteDate" mdbInput>
+
+    </div>
+    <div class="text-center">
+      <button type="submit" mdbBtn color="indigo" class="waves-light btn btn-info" mdbWavesEffect>Post Quote</button>
+      <hr class="hr-light mb-3 mt-4">
+    </div>
+
+</form>
 </div>

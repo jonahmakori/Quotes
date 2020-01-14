@@ -1,25 +1,5 @@
+body{
+  background: linear-gradient(rgba(1, 12, 6, 0.23),rgba(22, 190, 64, 0.23));
+  font-size: 30px;
+}
 
-.text-center{
-    color: aqua;
-    font-family: monospace;
-    text-align: left;
-    font-size:2.5em;
-}
-#quotes{
-    border: 2px solid white;
-    text-align: center;
-    color:whitesmoke;
-    text-shadow: 2px 2px 4px #000000;
-    font-size:1.3em;
-    padding:10px;
-    box-shadow: 5px 10px #888888;
-}
-.aaa {
-    color:lime;
-}
-.icon {
-    color:aqua;
-}
-.icons {
-    color:red;
-}

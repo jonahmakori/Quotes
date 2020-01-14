@@ -1,26 +1,46 @@
 
-
+<body>
 <div class="container">
-  <h1>MY QUOTES</h1>
-  <hr>
+  <section class="view intro-2">
+    <div class="full-bg-img mask rgba-gradient">
+      <div class="container flex-center">
+        <div class="d-flex align-items-center content-height w-100">
+          <div class="row flex-center pt-5 mt-3 w-100">
+            <div class="col-md-6">
+              <div class="white-text ">
+                <h2 class="h1 h1-responsive font-bold wow fadeInLeft" data-wow-delay="0.3s"> Quotes </h2>
+                <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
+                <h6 class="wow fadeInLeft" data-wow-delay="0.3s">
+                  <div class="myQuote " *ngFor="let quote of quotes; let i=index">
+                    <p class="h3 h3-responsive font-bold wow fadeInLeft" data-wow-delay="1s" appHighlight *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0">
+                      {{quote.quote}}
 
-  <div class="row">
-    <div class="col-md-6">
-      <div *ngFor='let quote of quotes;let i = index'>
-        <div>
-          <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
-        </div>
+                    </p>
+                     <p class="h3 h3-responsive font-bold wow fadeInLeft" data-wow-delay="1s" *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">{{quote.quote}}
+                     </p>
 
-        <div *ngIf='quote.showDescription'>
-          <app-quote-detail  [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
+                    <app-quote-detail [quote]="quote"></app-quote-detail>
+                    <button class="btn btn-primary" (click)="upvote(i)">Upvote </button>
+                    <button class="btn btn-primary" (click)="downvote(i)">Downvote </button>
+                    <button class="btn btn-danger" (click)="delQuote(i)">Delete</button>
+                  </div>
+                </h6>
+                <br>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              
+              <div class="">
+                <app-quote-form (emitQuote)="addQuote($event)"></app-quote-form>
+              </div>
+        
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-6">
-      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-    </div>
-  </div>
+  </section>
 </div>
-
-
+</body>
 

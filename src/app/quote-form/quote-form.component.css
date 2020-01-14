@@ -1,11 +1,5 @@
-.newquote{
-    color:black;;
-    font-family: monospace;
-    padding-top: 8%;
+body{
+  background: linear-gradient(rgba(1, 12, 6, 0.23),rgba(22, 190, 64, 0.23));
+  font-size: 30px;
 }
-form{
-    font-family: fantasy;
-    font-style: oblique;
-    font-size: 20px;
-    
-}
+
