@@ -9,3 +9,10 @@
  <img src="src/assets/images/screenshot.png" width=500px >
  This is the landing page of the Website.
 
+## Technologies Used
+
+- Angular
+- Typescript
+- HTML
+- CSS
+- Bootsrapp
