@@ -66,4 +66,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ### License
 
 The project is under[MIT license](/blob/master/LICENSE)
-
+Copyright &copy; 2019.All rigths reserved
