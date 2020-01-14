@@ -12,14 +12,14 @@
                 <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
                 <h6 class="wow fadeInLeft" data-wow-delay="0.3s">
                   <div class="myQuote " *ngFor="let quote of quotes; let i=index">
-                    <p class="h3 h3-responsive font-bold wow fadeInLeft" data-wow-delay="1s" appHighlight *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0">
+                    <p class="quote"  data-wow-delay="1s" appHighlight *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0">
                       {{quote.quote}}
 
                     </p>
                      <p class="h3 h3-responsive font-bold wow fadeInLeft" data-wow-delay="1s" *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">{{quote.quote}}
                      </p>
 
-                    <app-quote-detail [quote]="quote"></app-quote-detail>
+                    <app-quote-detail [quote]="quote" style="color: deeppink;" ></app-quote-detail>
                     <button class="btn btn-primary" (click)="upvote(i)">Upvote </button>
                     <button class="btn btn-primary" (click)="downvote(i)">Downvote </button>
                     <button class="btn btn-danger" (click)="delQuote(i)">Delete</button>

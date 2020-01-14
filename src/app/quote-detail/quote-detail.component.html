@@ -1,10 +1,7 @@
-<div class="card" style="color: rgb(16, 95, 5);">
+<div class="card" style="color: rgb(6, 41, 2);">
 
     <p>
       Author:{{quote.author}}
-    </p>
-    <p>
-      Publisher:{{quote.name}}
     </p>
     <p>
       Upvotes:{{quote.upvotes}}
@@ -12,8 +9,5 @@
     <p>
       Downvotes:{{quote.downvotes}}
     </p>
-    <p>
-       Date {{quote.completeDate|date}}
-      </p>
-
+    <p>Posted By :{{quote.name}} {{quote.completeDate|dateAgo}}</p>
   </div>
